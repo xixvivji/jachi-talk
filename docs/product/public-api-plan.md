@@ -1,47 +1,47 @@
-# Public API Plan
+# 공공 API 계획
 
-## MVP APIs
+## MVP 연동 후보
 
-### Real Estate Transaction Data
+### 부동산 실거래가 데이터
 
-Use for neighborhood-level rent and transaction context.
+동네별 월세, 전세, 매매 시세 흐름을 보여주는 데 사용합니다.
 
 - 국토교통부 아파트 실거래가
 - 국토교통부 연립다세대 실거래가
 - 국토교통부 오피스텔 실거래가
 
-### Region Codes
+### 지역 코드
 
-Use for mapping user-facing region names to legal dong codes.
+사용자가 입력한 지역명을 법정동 코드와 매핑하는 데 사용합니다.
 
 - 법정동 코드
 - 행정구역 코드
-- 도로명주소 API if address search is needed later
+- 도로명주소 API는 주소 검색이 필요해질 때 검토
 
-### Store and Facility Data
+### 상권/생활시설 데이터
 
-Use for living convenience metrics.
+생활 편의 지표를 만들 때 사용합니다.
 
 - 소상공인시장진흥공단 상가업소정보
-- 서울 열린데이터광장 local facility datasets if starting from Seoul
+- 서울부터 시작한다면 서울 열린데이터광장의 생활시설 데이터 검토
 
-## Later APIs
+## 이후 연동 후보
 
-- 서울시 지하철역/버스정류소 data
-- 서울시 생활인구 data
+- 서울시 지하철역/버스정류소 데이터
+- 서울시 생활인구 데이터
 - 한국환경공단 대기오염정보
 - 기상청 단기예보
 
-## Collection Strategy
+## 수집 전략
 
-- Cache public API responses by region and date.
-- Store raw snapshots in PostgreSQL first.
-- Move large raw payloads to S3 when volume grows.
-- Track latency, status code, timeout, and failure reason for each external API call.
+- 공공 API 응답은 지역과 날짜 기준으로 캐싱합니다.
+- 초기에는 원본 스냅샷을 PostgreSQL에 저장합니다.
+- 데이터량이 커지면 큰 원본 응답은 S3로 이동합니다.
+- 외부 API 호출마다 응답 시간, 상태 코드, 타임아웃, 실패 사유를 기록합니다.
 
-## Important Constraints
+## 주의할 점
 
-- Public data can be incomplete or delayed.
-- Legal dong and administrative dong mappings must be handled carefully.
-- The service should show data source and collection date.
-- Avoid language that sounds like investment advice.
+- 공공데이터는 누락되거나 늦게 갱신될 수 있습니다.
+- 법정동과 행정동 매핑을 주의해서 다뤄야 합니다.
+- 화면에는 데이터 출처와 수집 시점을 함께 보여줍니다.
+- 투자 조언처럼 보이는 표현은 피합니다.

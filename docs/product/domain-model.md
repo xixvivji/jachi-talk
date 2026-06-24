@@ -1,8 +1,8 @@
-# Domain Model
+# 도메인 모델
 
-## Main Entities
+## 주요 엔티티
 
-### User
+### 사용자 (`User`)
 
 - id
 - email
@@ -12,7 +12,7 @@
 - created_at
 - updated_at
 
-### OAuthAccount
+### OAuth 계정 (`OAuthAccount`)
 
 - id
 - user_id
@@ -20,7 +20,7 @@
 - provider_user_id
 - created_at
 
-### Region
+### 지역 (`Region`)
 
 - id
 - sido
@@ -30,7 +30,7 @@
 - center_latitude
 - center_longitude
 
-### RoomHandoverPost
+### 방 양도 게시글 (`RoomHandoverPost`)
 
 - id
 - author_id
@@ -51,7 +51,7 @@
 - created_at
 - updated_at
 
-### CommunityPost
+### 커뮤니티 게시글 (`CommunityPost`)
 
 - id
 - author_id
@@ -62,7 +62,7 @@
 - created_at
 - updated_at
 
-### Comment
+### 댓글 (`Comment`)
 
 - id
 - author_id
@@ -72,7 +72,7 @@
 - created_at
 - updated_at
 
-### Report
+### 신고 (`Report`)
 
 - id
 - reporter_id
@@ -82,7 +82,7 @@
 - status
 - created_at
 
-### PublicDataSnapshot
+### 공공데이터 스냅샷 (`PublicDataSnapshot`)
 
 - id
 - region_id
@@ -91,7 +91,7 @@
 - payload_json
 - collected_at
 
-### EventLog
+### 이벤트 로그 (`EventLog`)
 
 - id
 - user_id
@@ -100,15 +100,15 @@
 - request_id
 - created_at
 
-## Initial Categories
+## 초기 커뮤니티 카테고리
 
-Community categories:
+커뮤니티 카테고리:
 
-- question
-- review
-- noise
-- safety
-- maintenance_fee
-- facility
-- restaurant
-- free_talk
+- 질문
+- 후기
+- 소음
+- 치안
+- 관리비
+- 생활시설
+- 맛집
+- 자유게시판

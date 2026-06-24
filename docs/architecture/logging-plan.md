@@ -1,11 +1,11 @@
-# Logging Plan
+# 로그 수집 계획
 
-## Application Logs
+## 애플리케이션 로그
 
-Backend logs should include:
+백엔드 로그에는 다음 값을 포함합니다.
 
 - request_id
-- user_id when available
+- user_id, 확인 가능한 경우
 - method
 - path
 - status_code
@@ -13,19 +13,19 @@ Backend logs should include:
 - error_code
 - exception_name
 
-Avoid logging:
+다음 값은 로그에 남기지 않습니다.
 
-- access tokens
-- refresh tokens
-- OAuth provider secrets
-- exact private addresses
-- phone numbers
-- contract documents
-- identity documents
+- 액세스 토큰
+- 리프레시 토큰
+- OAuth 제공자 시크릿
+- 정확한 개인 주소
+- 전화번호
+- 계약서
+- 신분증
 
-## Event Logs
+## 이벤트 로그
 
-Initial event names:
+초기 이벤트 이름:
 
 - user_signed_in
 - room_post_created
@@ -40,9 +40,9 @@ Initial event names:
 - public_api_failed
 - ai_risk_check_requested
 
-## External API Logs
+## 외부 API 로그
 
-Track:
+기록할 값:
 
 - provider
 - endpoint
@@ -53,15 +53,15 @@ Track:
 - error_message
 - requested_at
 
-## Admin Metrics
+## 관리자 지표
 
-Show:
+화면에 보여줄 값:
 
-- daily active users
-- new room handover posts
-- new community posts
-- report count
-- top viewed regions
-- external API failure rate
-- average external API latency
-- AI request count and estimated cost
+- 일간 활성 사용자
+- 신규 방 양도 게시글 수
+- 신규 커뮤니티 게시글 수
+- 신고 수
+- 많이 조회된 지역
+- 외부 API 실패율
+- 외부 API 평균 응답 시간
+- AI 요청 수와 예상 비용

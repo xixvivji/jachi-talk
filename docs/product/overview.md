@@ -1,35 +1,35 @@
-# Product Overview
+# 제품 개요
 
-## Positioning
+## 포지셔닝
 
-Jachi Talk is a renter-focused community for people who want to hand over a room, take over a room, or learn what a neighborhood is actually like before moving.
+자취톡은 방을 양도하려는 사람, 방을 이어받으려는 사람, 이사 전에 동네의 실제 분위기를 알고 싶은 사람을 위한 자취 커뮤니티입니다.
 
-It is not a real estate brokerage platform. The first version focuses on renter information, community discussion, and public-data-backed neighborhood context.
+부동산 중개 플랫폼이 아니라, 자취생과 1인 가구를 위한 정보 공유와 커뮤니티에 집중합니다. 첫 버전은 방 양도 게시판, 동네 후기, 공공데이터 기반 동네 정보를 중심으로 만듭니다.
 
-## Target Users
+## 대상 사용자
 
 - 대학생, 사회초년생, 1인 가구
 - 남은 계약 기간 때문에 방을 양도하려는 사람
 - 단기 입주나 빠른 입주가 필요한 사람
 - 특정 동네의 실제 거주 후기를 알고 싶은 사람
 
-## Differentiation
+## 차별화
 
 - 직방/다방보다 커뮤니티와 실거주 정보에 집중합니다.
 - 당근보다 방 양도와 자취 정보 구조에 집중합니다.
 - 공공데이터와 커뮤니티 후기를 함께 보여줍니다.
 - AI가 글 작성, 위험 요소 확인, 후기 요약을 보조합니다.
 
-## Main Features
+## 주요 기능
 
-- Room handover board
-- Neighborhood community board
-- Neighborhood data dashboard
-- Comments, reports, moderation
-- AI summary and risk check
-- Admin operational dashboard
+- 방 양도 게시판
+- 동네별 커뮤니티 게시판
+- 동네 데이터 대시보드
+- 댓글, 신고, 관리자 처리
+- AI 요약과 위험 요소 확인
+- 운영 지표 관리자 화면
 
-## Safety Notes
+## 안전 장치
 
 - 정확한 주소, 신분증, 계약서 등 민감정보 업로드를 제한합니다.
 - 방 양도는 임대인 동의가 필요할 수 있음을 안내합니다.

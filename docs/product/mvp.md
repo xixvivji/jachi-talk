@@ -1,57 +1,57 @@
-# MVP Plan
+# MVP 계획
 
-## Phase 1
+## 1단계
 
-Goal: 방 양도와 동네 커뮤니티가 동작하는 최소 제품을 만듭니다.
+목표: 방 양도와 동네 커뮤니티가 동작하는 최소 제품을 만듭니다.
 
-### User Features
+### 사용자 기능
 
-- Kakao/Naver OAuth login
-- Profile nickname setup
-- Room handover post list/detail/create/update/delete
-- Region and price filters
-- Community post list/detail/create/update/delete
-- Comments
-- Report post/comment
+- 카카오/네이버 OAuth 로그인
+- 프로필 닉네임 설정
+- 방 양도 게시글 목록/상세/작성/수정/삭제
+- 지역과 가격 필터
+- 커뮤니티 게시글 목록/상세/작성/수정/삭제
+- 댓글
+- 게시글/댓글 신고
 
-### Room Handover Fields
+### 방 양도 게시글 항목
 
-- Title
-- Region
-- Nearest station
-- Deposit
-- Monthly rent
-- Maintenance fee
-- Available move-in date
-- Remaining contract period
-- Room type
-- Floor
-- Options
-- Pet allowed
-- Landlord consent status
-- Description
-- Images
-- Status: open, in_progress, closed
+- 제목
+- 지역
+- 가까운 역
+- 보증금
+- 월세
+- 관리비
+- 입주 가능일
+- 남은 계약 기간
+- 방 유형
+- 층수
+- 옵션
+- 반려동물 가능 여부
+- 임대인 동의 상태
+- 설명
+- 이미지
+- 상태: 모집중, 대화중, 완료
 
-### Admin Features
+### 관리자 기능
 
-- Report list
-- Hide post/comment
-- External API error list
-- Basic traffic/event dashboard
+- 신고 목록
+- 게시글/댓글 숨김
+- 외부 API 오류 목록
+- 기본 트래픽/이벤트 대시보드
 
-## Phase 2
+## 2단계
 
-- Public data dashboard per region
-- Region comparison
-- Favorite regions/posts
-- AI room post risk check
-- AI neighborhood review summary
+- 지역별 공공데이터 대시보드
+- 동네 비교
+- 관심 동네/게시글
+- AI 방 양도글 위험 요소 확인
+- AI 동네 후기 요약
 
-## Phase 3
+## 3단계
 
-- Personalized neighborhood recommendation
-- Message or inquiry flow
-- Search improvements
-- Cost tracking for AI and public API usage
-- AWS deployment hardening
+- 개인 맞춤 동네 추천
+- 메시지 또는 문의 흐름
+- 검색 개선
+- AI와 공공 API 사용 비용 추적
+- AWS 배포 안정화
