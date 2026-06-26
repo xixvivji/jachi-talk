@@ -13,7 +13,7 @@
 ## 기술 스택
 
 - 프론트엔드: Next.js, TypeScript, Tailwind CSS
-- 백엔드: Java 21, Spring Boot 3
+- 백엔드: Java 17+, Spring Boot 3
 - 데이터베이스: PostgreSQL
 - ORM: Spring Data JPA
 - 마이그레이션: Flyway

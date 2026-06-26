@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: jachi-talk-postgres
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-jachi_talk}
+      POSTGRES_USER: ${POSTGRES_USER:-jachi}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-jachi_local_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-jachi} -d ${POSTGRES_DB:-jachi_talk}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres-data:
+

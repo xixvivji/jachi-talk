@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: jachi-talk-api
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/jachi_talk}
+    username: ${SPRING_DATASOURCE_USERNAME:jachi}
+    password: ${SPRING_DATASOURCE_PASSWORD:jachi_local_password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
