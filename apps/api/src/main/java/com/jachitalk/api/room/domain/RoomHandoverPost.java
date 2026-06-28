@@ -90,6 +90,18 @@ public class RoomHandoverPost extends BaseTimeEntity {
         this.description = description;
     }
 
+    public void updateDetails(Long maintenanceFee, LocalDate availableFrom, LocalDate contractUntil,
+                              String nearestStation, String floor, Boolean petAllowed,
+                              LandlordConsentStatus landlordConsentStatus) {
+        this.maintenanceFee = maintenanceFee;
+        this.availableFrom = availableFrom;
+        this.contractUntil = contractUntil;
+        this.nearestStation = nearestStation;
+        this.floor = floor;
+        this.petAllowed = petAllowed;
+        this.landlordConsentStatus = landlordConsentStatus;
+    }
+
     public Long getId() {
         return id;
     }
@@ -154,4 +166,3 @@ public class RoomHandoverPost extends BaseTimeEntity {
         return status;
     }
 }
-
