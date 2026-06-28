@@ -76,6 +76,9 @@ public class RoomHandoverPost extends BaseTimeEntity {
     @Column(name = "status", nullable = false, length = 30)
     private RoomHandoverStatus status = RoomHandoverStatus.OPEN;
 
+    @Column(name = "hidden", nullable = false)
+    private boolean hidden = false;
+
     protected RoomHandoverPost() {
     }
 
@@ -100,6 +103,24 @@ public class RoomHandoverPost extends BaseTimeEntity {
         this.floor = floor;
         this.petAllowed = petAllowed;
         this.landlordConsentStatus = landlordConsentStatus;
+    }
+
+    public void updateBasicInfo(Region region, String title, Long deposit, Long monthlyRent,
+                                RoomType roomType, String description) {
+        this.region = region;
+        this.title = title;
+        this.deposit = deposit;
+        this.monthlyRent = monthlyRent;
+        this.roomType = roomType;
+        this.description = description;
+    }
+
+    public void changeStatus(RoomHandoverStatus status) {
+        this.status = status;
+    }
+
+    public void hide() {
+        this.hidden = true;
     }
 
     public Long getId() {
@@ -164,5 +185,9 @@ public class RoomHandoverPost extends BaseTimeEntity {
 
     public RoomHandoverStatus getStatus() {
         return status;
+    }
+
+    public boolean isHidden() {
+        return hidden;
     }
 }
