@@ -42,6 +42,9 @@ public class CommunityPost extends BaseTimeEntity {
     @Column(name = "content", nullable = false, columnDefinition = "text")
     private String content;
 
+    @Column(name = "hidden", nullable = false)
+    private boolean hidden = false;
+
     protected CommunityPost() {
     }
 
@@ -51,6 +54,17 @@ public class CommunityPost extends BaseTimeEntity {
         this.category = category;
         this.title = title;
         this.content = content;
+    }
+
+    public void update(Region region, CommunityPostCategory category, String title, String content) {
+        this.region = region;
+        this.category = category;
+        this.title = title;
+        this.content = content;
+    }
+
+    public void hide() {
+        this.hidden = true;
     }
 
     public Long getId() {
@@ -76,5 +90,8 @@ public class CommunityPost extends BaseTimeEntity {
     public String getContent() {
         return content;
     }
-}
 
+    public boolean isHidden() {
+        return hidden;
+    }
+}
