@@ -61,5 +61,7 @@ jachi-talk/
 - [Git 작업 전략](docs/development/git-workflow.md)
 - [백엔드 로컬 실행](docs/development/backend-local-run.md)
 - [방 양도글 API](docs/api/room-handover-posts.md)
+- [커뮤니티 게시글 API](docs/api/community-posts.md)
 - [공통 에러 응답](docs/api/error-response.md)
 - [방 양도글 도메인 기록](docs/domain/room-handover.md)
+- [커뮤니티 도메인 기록](docs/domain/community.md)

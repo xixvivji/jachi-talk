@@ -52,6 +52,26 @@ curl "http://localhost:8080/api/room-handover-posts?page=0&size=20"
 curl http://localhost:8080/api/room-handover-posts/1
 ```
 
+커뮤니티 게시글 생성:
+
+```bash
+curl -X POST http://localhost:8080/api/community-posts \
+  -H "Content-Type: application/json" \
+  -d '{
+    "authorId": 1,
+    "regionId": 1,
+    "category": "QUESTION",
+    "title": "신림동 밤에 조용한 편인가요?",
+    "content": "신림역 근처로 이사 고민 중인데 소음이 어떤지 궁금합니다."
+  }'
+```
+
+커뮤니티 게시글 목록:
+
+```bash
+curl "http://localhost:8080/api/community-posts?regionId=1&category=QUESTION&page=0&size=20"
+```
+
 Swagger:
 
 ```txt
